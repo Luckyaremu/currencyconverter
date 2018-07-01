@@ -1,0 +1,19 @@
+.main-panel{
+    margin: auto;
+}
+
+div.row{
+    padding: 10px
+}
+
+.panel{
+    border: 3px solid green;
+}
+
+
+.header{
+    background-color: green;
+    color:white;
+    font-weight: bold;
+}
+

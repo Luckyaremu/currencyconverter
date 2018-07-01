@@ -1,0 +1,27 @@
+{
+  "name": "mycurrency",
+  "version": "1.0.0",
+  "description": "To convert currency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asafoseth/mycurrency.git"
+  },
+  "keywords": [
+    "currency",
+    "converter"
+  ],
+  "author": "sethasafogh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asafoseth/mycurrency/issues"
+  },
+  "homepage": "https://github.com/asafoseth/mycurrency#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1"
+  }
+}

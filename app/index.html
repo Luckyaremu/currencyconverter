@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+    
+    
+</head>
+<body onload="viewCurrencies()">
+
+    <div class="container main-panel">
+        <div class="col-md-offset-8 col-md-4 panel">
+            <div class="row header">
+                Currency Converter
+            </div>
+            <div class="row">
+                <div class="col-md-4">Amount:</div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="amount"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">From:</div>
+                <div class="col-md-4"><select id="from"> </select></div>
+                <div class="col-md-2">To:</div>
+                <div class="col-md-4"><select id="to"></select></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <button onclick="getCurrency()" class="btn btn-primary">Convert</button>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="Press Convert"  id="result" readonly/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/currency.js"></script>
+    <script>
+        function getCurrency(){
+        let amount = document.getElementById("amount").value;
+        let from = document.getElementById("from");
+        let to = document.getElementById("to");
+            
+        convertCurrency(amount, from.value, to.value)
+    }
+    </script>
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('sw.js')
+                .then(function() { console.log("Registered Service Worker"); 
+                 });
+            }
+    </script>
+</body>
+</html>
